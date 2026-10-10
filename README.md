@@ -33,12 +33,6 @@ video outputs. This can be useful if you suspect RSX to be failing in some way.
 Reports and `diag.log` are saved to `/dev_hdd0/game/RSXD00001/USRDIR/`; the log is also copied to
 the first USB drive (`RSX_DIAG.log`) if one is plugged in.
 
-## New in 1.5
-- The stress test now really loads the RSX: full-screen layers of a heavy shader on a 1280x720
-  target, sized so each frame takes the chip ~25-50 ms, with two frames always queued. 1.4 drew
-  a tiny 64x64 scene and waited for every frame, so the chip was mostly idle and cooled down.
-- The stress report lists the RSX and Cell temperature at the start, the highest seen and at the end.
-
 Temperatures use lv2 syscall 383, which some firmwares do not allow; the report then says so.
 A failed test is not proof of a hardware fault on its own - run it again, and compare with the
 console cold and warm.
