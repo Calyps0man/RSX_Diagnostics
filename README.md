@@ -1,4 +1,4 @@
-# RSX Diagnostics 1.5 (experimental)
+# RSX Diagnostics tests (experimental)
 
 A standalone PS3 app (title RSXD00001) for checking the RSX graphics chip, its memory and the
 video outputs. Useful when a console shows artifacts, freezes or "GLOD" symptoms, or won't set a resolution.
