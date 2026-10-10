@@ -39,35 +39,8 @@ the first USB drive (`RSX_DIAG.log`) if one is plugged in.
   a tiny 64x64 scene and waited for every frame, so the chip was mostly idle and cooled down.
 - The stress report lists the RSX and Cell temperature at the start, the highest seen and at the end.
 
-## New in 1.4
-- The stress test (and every other test) now starts from a clean drawing state: the shader
-  programs are re-uploaded and cached bindings dropped first. 1.3 could report "Scene actually
-  draws ... 0 pixels" when the stress test ran after other tests.
-- If the stress scene still draws nothing, the report says whether a plain single rectangle
-  draws, to tell a state problem from a hardware one.
-- The RSX line on the main screen is shorter (no memory addresses), so it fits.
-
-## New in 1.3
-- Reports are titled "RSX Diagnostics" (no more PPSSPP), and the video report only covers the
-  console's own HDMI / AV multi output (the remote play output is left out).
-
-## New in 1.2
-- The screen no longer uses SDL at all. 1.1 still froze on the test patterns and during tests:
-  the progress screen and patterns went through SDL's PS3 renderer, which hung the console. The
-  app now draws its screens with the CPU straight into its own display buffers and only asks the
-  RSX to flip, so the progress bar, the patterns and the PS button menu don't depend on the
-  graphics engine that is being tested.
-- Test patterns are drawn at the display's native resolution (a real 1-pixel checkerboard).
-
-## New in 1.1
-- Tests show a progress screen (step, percentage, elapsed time, live temperatures in the stress
-  test) and can be cancelled with Circle.
-- Fixed: test patterns froze the console. The RSX's scaled-copy engine hangs on sources wider or
-  taller than 1024 pixels; patterns now use a 1024x576 image, and any larger copy is split.
-- Self-test: the "render target in main memory" check now runs last, followed by a draw check,
-  to find out whether it is what broke the drawing checks after it on some consoles.
-- Stress test: fails if the scene doesn't actually draw (a blank frame also "matches" itself).
-
 Temperatures use lv2 syscall 383, which some firmwares do not allow; the report then says so.
 A failed test is not proof of a hardware fault on its own - run it again, and compare with the
 console cold and warm.
+
+## WARNING: THIS IS EXPERIMENTAL TOOL , USE AT YOUR OWN RISK !!!
