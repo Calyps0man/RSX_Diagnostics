@@ -3,7 +3,7 @@
 A standalone PS3 app (title RSXD00001) for checking the RSX graphics chip, VRAM and the
 video outputs. This can be useful if you suspect RSX to be failing in some way.
 
-![Example diagnostic screen](RSX_DIAG.png)
+![Example diagnostic screen](RSX_DIAG.jpg)
 
 
 ## Menu
