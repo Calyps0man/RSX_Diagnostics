@@ -1,7 +1,10 @@
 # RSX Diagnostics tests (experimental)
 
-A standalone PS3 app (title RSXD00001) for checking the RSX graphics chip, its memory and the
-video outputs. Useful when a console shows artifacts, freezes or "GLOD" symptoms, or won't set a resolution.
+A standalone PS3 app (title RSXD00001) for checking the RSX graphics chip, VRAM and the
+video outputs. This can be useful if you suspect RSX to be failing in some way.
+
+![Example diagnostic screen](RSX_DIAG.png)
+
 
 ## Menu
 - **Run all tests** (about 2 minutes): video report, self-test, VRAM test, 60 s stress test.
