@@ -1,8 +1,7 @@
 # RSX Diagnostics 1.5
 
 A standalone PS3 app (title RSXD00001) for checking the RSX graphics chip, its memory and the
-video outputs. It grew out of the PPSSPP PS3 port's hardware-renderer tests. Useful when a console
-shows artifacts, freezes or "GLOD" symptoms, or won't set a resolution.
+video outputs. Useful when a console shows artifacts, freezes or "GLOD" symptoms, or won't set a resolution.
 
 ## Menu
 - **Run all tests** (about 2 minutes): video report, self-test, VRAM test, 60 s stress test.
